@@ -12,7 +12,7 @@ IoT Mobile Dashboard is a Flutter application that visualizes live sensor data r
 
 The project appears to be built for operators or engineers who need a compact way to monitor a remote device or vehicle in real time. Its main objective is to turn streamed sensor payloads into readable dashboard cards, charts, forecasts, and logs.
 
-This repository is currently mobile-focused. Web support has been removed from the codebase.
+This repository is currently mobile-focused.
 
 ## 3. Features
 
@@ -88,9 +88,7 @@ The project does not use Firebase, a database, or a dedicated external state-man
 | `lib/main.dart` | Main application entry point and all runtime logic, including UI, MQTT handling, forecasting, GPS mapping, and export logic |
 | `assets/fonts/` | Bundled fonts used by the UI |
 | `android/` | Android application configuration and permissions |
-| `ios/` | iOS application configuration |
 | `test/` | Flutter widget test |
-| `linux/`, `macos/`, `windows/` | Default Flutter desktop scaffolding included by Flutter |
 
 The current source keeps the app logic largely in `lib/main.dart` instead of splitting it into multiple feature folders.
 
@@ -101,7 +99,6 @@ The current source keeps the app logic largely in `lib/main.dart` instead of spl
 - Flutter SDK compatible with Dart `^3.11.0`
 - Android Studio or VS Code with Flutter and Dart extensions
 - Android SDK for Android builds
-- Xcode for iOS builds on macOS
 
 ### Clone the repository
 
@@ -201,22 +198,6 @@ flutter devices
 flutter run -d <android-device-id>
 ```
 
-### iOS
-
-```bash
-flutter devices
-flutter run -d <ios-device-id>
-```
-
-For iOS builds, run the project on macOS with Xcode installed.
-
-### Web
-
-Web is not supported in the current project version.
-
-### Desktop
-
-Unable to determine from the project source.
 
 ## 10. How the Application Works
 
@@ -296,15 +277,6 @@ flutter build apk --release
 
 ```bash
 flutter build appbundle --release
-```
-
-### iOS build
-
-```bash
-cd ios
-pod install
-cd ..
-flutter build ios --release
 ```
 
 ## 15. Troubleshooting
